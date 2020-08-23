@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Vadim0802/test#readme",
   "dependencies": {
     "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
   }
 }
