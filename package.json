@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "test",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Vadim0802/test/issues"
   },
-  "homepage": "https://github.com/Vadim0802/test#readme"
+  "homepage": "https://github.com/Vadim0802/test#readme",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
 }
