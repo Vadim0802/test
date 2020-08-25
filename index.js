@@ -1,15 +1,39 @@
-import _ from "lodash";
-
-const factorial = (n) => {
-  if (n === 0) {
-    return 1;
-  }
-  return n * factorial(n - 1);
+const firstSemesterSubjects = {
+  chemistry: {
+    faculty: 'Chemistry faculty',
+    teacher: 'Ivanov',
+  },
+  law: {
+    // какие-то характеристики
+  },
+  informatics: null,
+  microeconomics: {
+    // какие-то характеристики
+  },
 };
 
-console.log(factorial(5));
+const secondSemesterSubjects = {
+  microeconomics: null,
+  chemistry: {
+    faculty: 'Chemistry faculty',
+    teacher: 'Ivanov',
+  },
+  informatics: {
+    // какие-то характеристики
+  },
+};
 
-const arr = [1, 2];
-const arr1 = [2, 3];
+const getRemovedSubjects = (first, second) => {
+  const removedSubjects = [];
+  const firstSemestrSubj = Object.keys(first);
 
-console.log(_.intersection(arr, arr1));
+  for (const subj of firstSemestrSubj) {
+    if (!second.hasOwnProperty(subj)) {
+      removedSubjects.push(subj);
+    }
+  }
+
+  return removedSubjects;
+};
+
+console.log(getRemovedSubjects(firstSemesterSubjects, secondSemesterSubjects));
