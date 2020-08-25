@@ -1,4 +1,7 @@
 import _ from 'lodash';
+import crc32 from 'crc-32';
 
-
-export default _;
+export {
+  _,
+  crc32,
+};

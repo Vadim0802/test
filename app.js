@@ -1,10 +1,9 @@
-import {getSortedNames} from './src/getSortedNames.js';
+import * as obj from './src/customObject.js';
+import { crc32 } from './main.js';
 
-const users = [
-  { name: 'Bronn', gender: 'male', birthday: '1973-03-23' },
-  { name: 'Reigar', gender: 'male', birthday: '1973-11-03' },
-  { name: 'Eiegon', gender: 'male', birthday: '1963-11-03' },
-  { name: 'Sansa', gender: 'female', birthday: '2012-11-03' },
-];
+const map = obj.make();
+obj.set(map, 'aaaaa0.462031558722291', 'vvv');
+obj.set(map, 'aaaaa0.0585754039730588', 'boom!');
 
-console.log(getSortedNames(users));
+const result1 = obj.get(map, 'aaaaa0.462031558722291');
+console.log(result1);
